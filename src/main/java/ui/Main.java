@@ -8,7 +8,8 @@ public class Main {
     public static void main(String[] args) {
         // TODO:
         // run from constructor
-        MainGUI menu = new MainGUI();
+//        MainGUI menu = new MainGUI();
+        Menu menu = new Menu();
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             for (Event e : EventLog.getInstance()) {
                 System.out.println(e.toString());

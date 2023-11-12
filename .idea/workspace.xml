@@ -4,35 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="150379ef-4a56-4a5c-b163-3f0d35159ea2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/EventLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/ListRooms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/StudyRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/TimeSlot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/persistence/JsonReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/persistence/JsonWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/persistence/Writable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/MainGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/frames/BookGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/frames/ChangeGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/frames/DeleteGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/frames/ScheduleGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/EventLogTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/EventTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/ListRoomsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/StudyRoomTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/TimeSlotTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/persistence/JsonReaderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/persistence/JsonWriterTest.java" afterDir="false" />
+    <list default="true" id="150379ef-4a56-4a5c-b163-3f0d35159ea2" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,25 +17,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2XKLy0daqwwHaQZpDa8diKFf58j" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Nurda/Projects/CityU-CS3343-Software-Engineering/CS3343-Group-project/src/test/java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nurda/Projects/CityU-CS3343-Software-Engineering/CS3343-Group-project/src/test/java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Nurda\Projects\CityU-CS3343-Software-Engineering\CS3343-Group-project\src\test\java" />
@@ -90,11 +70,48 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698373080863</updated>
-      <workItem from="1698373081993" duration="296000" />
+      <workItem from="1698373081993" duration="464000" />
+      <workItem from="1699768849255" duration="327000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1698373445230</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698373445230</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>

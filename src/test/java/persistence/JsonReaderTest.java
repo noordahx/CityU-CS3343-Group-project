@@ -33,14 +33,6 @@ class JsonReaderTest  {
         } catch (IOException e) {
             fail("Couldn't read from file");
         }
-
-        JsonReader readerFile = new JsonReader(new File("./data/testReaderEmptyWorkroom.json"));
-        try {
-            ListRooms lr = reader.read();
-            assertEquals(0, lr.numRooms());
-        } catch (IOException e) {
-            fail("Couldn't read from file");
-        }
     }
 
 

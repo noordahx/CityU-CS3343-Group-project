@@ -14,7 +14,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class EventTest {
 	private Event e;
 	private Date d;
-	
+
+	//NOTE: these tests might fail if time at which line (2) below is executed
+	//is different from time that line (1) is executed.  Lines (1) and (2) must
+	//run in same millisecond for this test to make sense and pass.
+
 	@BeforeEach
 	public void runBefore() {
 		e = new Event("Sensor open at door");   // (1)
@@ -38,6 +42,13 @@ public class EventTest {
 		String temp = "Not an event";
 		boolean result = e.equals(temp);
 		assertEquals(result, false);
+	}
+
+	@Test
+	public void testEquals3() {
+		Event e2 = new Event("Sensor open at door");
+		boolean result = e.equals(e2);
+		assertEquals(result, true);
 	}
 
 	@Test

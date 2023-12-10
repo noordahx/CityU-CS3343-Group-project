@@ -42,30 +42,36 @@ public class Menu {
         startApp();
     }
 
-
-
     // Requires: console input integer between 1 - 5 or q
     // Modifies: this
-    // Effects: prints out menu options and redirects to suitable method based on user input
+    // Effects: prints out menu options and redirects to suitable method based on
+    // user input
     private void startApp() {
         printBanner();
         while (true) {
             printMenu();
             String userInput = in.nextLine();
             switch (userInput) {
-                case "1": showSchedule();
+                case "1":
+                    showSchedule();
                     continue;
-                case "2": bookStudyRoom();
+                case "2":
+                    bookStudyRoom();
                     continue;
-                case "3": deleteBooking();
+                case "3":
+                    deleteBooking();
                     continue;
-                case "4": alterBooking();
+                case "4":
+                    alterBooking();
                     continue;
-                case "5": saveData();
+                case "5":
+                    saveData();
                     continue;
-                case "6": loadData();
+                case "6":
+                    loadData();
                     continue;
-                case "q": saveData();
+                case "q":
+                    saveData();
                     return;
             }
         }
@@ -96,23 +102,28 @@ public class Menu {
     }
 
     // Modifies: this
+    // Effects: prints out schedule (supplementary method)
+    private void getSchedule(int room) {
+        List<String> schedule = allRoomList.get(room - 1).getSchedule();
+        for (int i = 9; i < 18; i++) {
+            System.out.printf("%02d:00 - %02d:00 | %s \n",
+                    i, i + 1, schedule.get(i - 9));
+        }
+    }
+
+    // Modifies: this
     // Effects: lets user choose room and prints out study room availability
     private void showSchedule() {
         int room = chooseRoom();
         if (room != -1) {
-            List<String> schedule = allRoomList.get(room - 1).getSchedule();
-            for (int i = 9; i < 18; i++) {
-                System.out.printf("%02d:00 - %02d:00 | %s \n",
-                        i, i + 1, schedule.get(i - 9));
-            }
+            getSchedule(room);
         }
-
     }
-
 
     // Requires: console input integer between 9 - 17 and chosen timeslot is Free
     // Modifies: this
-    // Effects: lets user choose a room and timeslot1 and reserves a room if possible
+    // Effects: lets user choose a room and timeslot1 and reserves a room if
+    // possible
     private void bookStudyRoom() {
         int room = chooseRoom();
         if (room != -1) {
@@ -131,18 +142,14 @@ public class Menu {
         }
     }
 
-
-    // Requires: console input integer between 9 - 17 and booking to be deleted exists
+    // Requires: console input integer between 9 - 17 and booking to be deleted
+    // exists
     // Modifies: this
     // Effects: lets user choose a room and timeslot and deletes that timeslot
     private void deleteBooking() {
         int room = chooseRoom();
         if (room != -1) {
-            List<String> schedule = allRoomList.get(room - 1).getSchedule();
-            for (int i = 9; i < 18; i++) {
-                System.out.printf("%02d:00 - %02d:00 | %s \n",
-                        i, i + 1, schedule.get(i - 9));
-            }
+            getSchedule(room);
             int timeSlot = chooseTimeSlot();
             if (timeSlot != -1) {
                 allRoomList.get(room - 1).deleteTimeSlot(timeSlot);
@@ -158,12 +165,8 @@ public class Menu {
     private void alterBooking() {
         int room = chooseRoom();
         if (room != -1) {
-            List<String> schedule = allRoomList.get(room - 1).getSchedule();
-            for (int i = 9; i < 18; i++) {
-                System.out.printf("%02d:00 - %02d:00 | %s \n",
-                        i, i + 1, schedule.get(i - 9));
-            }
-
+            getSchedule(room);
+            
             System.out.println("Old Booking");
             int oldTimeSlot = chooseTimeSlot();
             String oldName = "";
@@ -226,7 +229,6 @@ public class Menu {
             }
         } while (true);
     }
-
 
     // Effects: checks if string given can be converted to integer.
     private static boolean isNumeric(String strNum) {

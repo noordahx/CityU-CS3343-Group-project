@@ -42,8 +42,10 @@ public class StudyRoom implements Writable {
     // Effects: given a time and name, handles the process of booking a study place.
     public void bookTimeSlot(int time, String name) {
         TimeSlot current = allTimeSlots.get(time - 9);
-        current.book(name);
-        EventLog.getInstance().logEvent(new Event(String.format("Booked a timeslot for %s at %d", name, time)));
+        if(current.getStatus()) {
+            current.book(name);
+            EventLog.getInstance().logEvent(new Event(String.format("Booked a timeslot for %s at %d", name, time)));
+        }
     }
 
     // Requires: 9 <= time <= 17

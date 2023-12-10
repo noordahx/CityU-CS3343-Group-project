@@ -39,6 +39,13 @@ public class ListRooms implements Writable {
         EventLog.getInstance().logEvent(new Event(String.format("Added new Study Room named: %s", newRoom.getName())));
     }
 
+    // Modifies: this
+    // Effects: adds new room to existing List of rooms
+    public void addAt(StudyRoom newRoom, int position) {
+        allRoomList.add(position, newRoom);
+        EventLog.getInstance().logEvent(new Event(String.format("Added new Study Room named: %s", newRoom.getName())));
+    }
+
     // Effects: returns StudyRoom at index i
     public StudyRoom get(int i) {
         return allRoomList.get(i);

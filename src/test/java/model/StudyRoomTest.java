@@ -73,7 +73,7 @@ public class StudyRoomTest {
     @Test
     public void testChangeTimeSlot() {
         TimeSlot ts = new TimeSlot();
-        room.changeTimeSlot(0,ts);
+        room.changeTimeSlot(0, ts);
         room.changeTimeSlot(1, ts);
         assertEquals(room.getTimeSlot(0), ts);
     }
@@ -101,5 +101,37 @@ public class StudyRoomTest {
         JSONArray timeSlotsArray = json.getJSONArray("TimeSlots");
         assertEquals(9, timeSlotsArray.length());
         // Add more assertions to verify the correctness of the generated JSON
+    }
+
+    //test bookTimeSlot method when it's already booked
+    @Test
+    public void testBookingAlreadyBookedTimeslot() {
+        room.bookTimeSlot(9, "User1");
+        room.bookTimeSlot(9, "User2");
+        assertEquals("User1", room.getTimeSlotUser(9));
+    }
+
+    //test deleting free timeslot
+    @Test
+    public void testDeletingFreeTimeslot() {
+        room.deleteTimeSlot(10);
+        assertTrue(room.getAvailability(10));
+    }
+
+    //test changing time slot at invalid index > 11
+    @Test
+    public void testChangingTimeslotWithInvalidIndex() {
+        TimeSlot timeSlot = new TimeSlot();
+        assertThrows(IndexOutOfBoundsException.class, () -> room.changeTimeSlot(12, timeSlot));;
+    }
+
+    //test toJson of room with no booked timeslots
+    @Test
+    public void testToJsonWithNoBookedTimeslots() {
+        JSONObject json = room.toJson();
+        assertNotNull(json);
+        assertEquals("Test Room", json.getString("name"));
+        JSONArray timeSlotsArray = json.getJSONArray("TimeSlots");
+        assertEquals(9, timeSlotsArray.length());
     }
 }

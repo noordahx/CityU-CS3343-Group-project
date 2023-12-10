@@ -5,19 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="150379ef-4a56-4a5c-b163-3f0d35159ea2" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/data/testReaderEmptyWorkroom.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/testReaderGeneralWorkroom.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/testWriterEmptyWorkroom.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/testWriterEmptyWorkroomFile.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/testWriterEmptyWorkroomFile2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/testWriterGeneralWorkroom.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/workroom.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/testWriterEmptyWorkroom.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/testWriterEmptyWorkroom.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/testWriterEmptyWorkroomFile.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/testWriterEmptyWorkroomFile.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/testWriterEmptyWorkroomFile2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/testWriterEmptyWorkroomFile2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/testWriterGeneralWorkroom.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/testWriterGeneralWorkroom.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/frames/ChangeGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/frames/ChangeGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/frames/DeleteGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/frames/DeleteGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -44,13 +49,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "java-code",
+    "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "corretto-21",
-    "last_opened_file_path": "C:/Users/Nurda/Projects/CityU-CS3343-Software-Engineering/CityU-CS3343-Group-project/data",
+    "last_opened_file_path": "C:/Users/Nurda/Projects/CityU-CS3343-Software-Engineering",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.updates",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -76,6 +83,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in CS3343-Group-project" />
+        <item itemvalue="JUnit.All in CS3343-Group-project" />
+        <item itemvalue="JUnit.All in CS3343-Group-project" />
+        <item itemvalue="JUnit.All in CS3343-Group-project" />
       </list>
     </recent_temporary>
   </component>
@@ -89,6 +99,11 @@
       <updated>1698373080863</updated>
       <workItem from="1698373081993" duration="464000" />
       <workItem from="1699768849255" duration="327000" />
+      <workItem from="1701406481450" duration="503000" />
+      <workItem from="1701407007617" duration="80000" />
+      <workItem from="1701407425499" duration="2333000" />
+      <workItem from="1701431646425" duration="195000" />
+      <workItem from="1702190312800" duration="867000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -132,7 +147,23 @@
     <MESSAGE value="Initial commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ui/frames/DeleteGUI.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ui/frames/DeleteGUI.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CityU_CS3343_Group_project$All_in_CS3343_Group_project.ic" NAME="All in CS3343-Group-project Coverage Results" MODIFIED="1700489882105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/CityU_CS3343_Group_project$All_in_CS3343_Group_project.ic" NAME="All in CS3343-Group-project Coverage Results" MODIFIED="1700490770636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

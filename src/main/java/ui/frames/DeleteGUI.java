@@ -54,10 +54,16 @@ public class DeleteGUI extends JFrame implements ActionListener {
     }
 
     // Modifies: (btnPanel) this
-    // Effects: adds a list of buttons each reffers to a single room
+    // Effects: adds a list of buttons each refers to a single room
     private void addActionButtons(JPanel btnPanel) {
-        for (StudyRoom sr : allRoomsList.getRooms()) {
-            addButton(btnPanel, sr.getName(), sr.getName());
+        if (allRoomsList == null) {
+            JLabel label = new JLabel("No bookings available");
+            label.setHorizontalAlignment(SwingConstants.CENTER);
+            btnPanel.add(label);
+        } else {
+            for (StudyRoom sr : allRoomsList.getRooms()) {
+                addButton(btnPanel, sr.getName(), sr.getName());
+            }
         }
     }
 

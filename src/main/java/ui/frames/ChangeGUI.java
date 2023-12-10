@@ -59,8 +59,14 @@ public class ChangeGUI extends JFrame implements ActionListener {
     // Modifies: this
     // Effects: creates multiple buttons and adds them to passed parameter list
     private void addActionButtons(JPanel btnPanel) {
-        for (StudyRoom sr : allRoomsList.getRooms()) {
-            addButton(btnPanel, sr.getName(), sr.getName());
+        if (allRoomsList == null) {
+            JLabel label = new JLabel("No bookings available");
+            label.setHorizontalAlignment(SwingConstants.CENTER);
+            btnPanel.add(label);
+        } else {
+            for (StudyRoom sr : allRoomsList.getRooms()) {
+                addButton(btnPanel, sr.getName(), sr.getName());
+            }
         }
     }
 

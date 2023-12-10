@@ -64,4 +64,17 @@ public class EventTest {
 	public void testToString() {
 		assertEquals(d.toString() + "\n" + "Sensor open at door", e.toString());
 	}
+
+	@Test
+    public void testSetDescription() {
+        e.setDescription("Sensor closed at door");
+        assertEquals("Sensor closed at door", e.getDescription());
+    }
+
+    @Test
+    public void testSetDate() {
+        Date newDate = Calendar.getInstance().getTime();
+        e.setDate(newDate);
+        assertEquals(newDate, e.getDate());
+    }
 }

@@ -30,6 +30,15 @@ public class Event {
         return dateLogged;
     }
 
+    public void setDate(Date date) {
+       this.dateLogged = date;
+    }
+
+    public void setDescription(String description) {
+       this.description = description;
+    }
+    
+
     /**
      * Gets the description of this event.
      * @return  the description of the event

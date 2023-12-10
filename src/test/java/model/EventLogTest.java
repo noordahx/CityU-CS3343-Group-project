@@ -51,4 +51,20 @@ public class EventLogTest {
 		assertEquals("Event log cleared.", itr.next().getDescription());
 		assertFalse(itr.hasNext());
 	}
+
+	@Test
+    public void testGetInstance() {
+        EventLog instance1 = EventLog.getInstance();
+        EventLog instance2 = EventLog.getInstance();
+        assertSame(instance1, instance2);
+    }
+	
+    @Test
+    public void testIteratorRemove() {
+        EventLog el = EventLog.getInstance();
+        Iterator<Event> itr = el.iterator();
+        itr.next();
+        itr.remove();
+        assertFalse(el.iterator().next().getDescription().equals(e1.getDescription()));
+    }
 }

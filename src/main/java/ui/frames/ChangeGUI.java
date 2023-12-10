@@ -170,9 +170,10 @@ public class ChangeGUI extends JFrame implements ActionListener {
         submit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                String name = allRoomsList.get(roomIndex).getTimeSlotUser(time);
                 allRoomsList.get(roomIndex).deleteTimeSlot(time);
                 int selected = Integer.valueOf(comboBox.getItemAt(comboBox.getSelectedIndex()));
-                allRoomsList.get(roomIndex).bookTimeSlot(selected, allRoomsList.get(roomIndex).getTimeSlotUser(time));
+                allRoomsList.get(roomIndex).bookTimeSlot(selected, name);
                 popUpFrame.dispose();
                 changeFrame.dispose();
                 new ChangeGUI(allRoomsList);

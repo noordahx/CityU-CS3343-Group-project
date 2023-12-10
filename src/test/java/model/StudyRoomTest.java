@@ -3,6 +3,9 @@ package model;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,5 +76,30 @@ public class StudyRoomTest {
         room.changeTimeSlot(0,ts);
         room.changeTimeSlot(1, ts);
         assertEquals(room.getTimeSlot(0), ts);
+    }
+
+    // test getTimeSlotUser method when the time slot is not booked
+    @Test
+    public void testGetTimeSlotUserNotBooked() {
+        assertEquals("", room.getTimeSlotUser(9));
+    }
+
+    // test getAvailability method when the time slot is not booked
+    @Test
+    public void testGetAvailabilityNotBooked() {
+        assertTrue(room.getAvailability(10));
+    }
+
+    // test toJson method
+    @Test
+    public void testToJson() {
+        room.bookTimeSlot(10, "User1");
+        room.bookTimeSlot(11, "User2");
+        JSONObject json = room.toJson();
+        assertNotNull(json);
+        assertEquals("Test Room", json.getString("name"));
+        JSONArray timeSlotsArray = json.getJSONArray("TimeSlots");
+        assertEquals(9, timeSlotsArray.length());
+        // Add more assertions to verify the correctness of the generated JSON
     }
 }

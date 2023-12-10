@@ -1,12 +1,19 @@
 package model;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import persistence.JsonReader;
+import persistence.JsonWriter;
+import persistence.Writable;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import static org.junit.jupiter.api.Assertions.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 
 public class ListRoomsTest {
@@ -44,5 +51,30 @@ public class ListRoomsTest {
         assertEquals(studyRooms.get(0).getName(), lr.getRooms().get(4).getName());
     }
 
+    @Test
+    public void testConstructor() {
+        assertEquals(4, lr.numRooms());
+    }
 
+    @Test
+    public void testAddRoom() {
+        StudyRoom newRoom = new StudyRoom("X500");
+        lr.add(newRoom);
+        assertEquals(5, lr.numRooms());
+        assertEquals(newRoom, lr.get(4));
+    }
+
+    @Test
+    public void testGetRoom() {
+        StudyRoom room = lr.get(2);
+        assertEquals("X300", room.getName());
+    }
+
+    @Test
+    public void testToJson() {
+        JSONObject json = lr.toJson();
+        assertNotNull(json);
+        JSONArray data = json.getJSONArray("data");
+        assertEquals(4, data.length());
+    }
 }
